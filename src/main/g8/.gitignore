@@ -1,0 +1,11 @@
+# build target
+target/
+
+# NPM stuff
+node_modules/
+npm_debug.log
+
+# OS specific trash
+.DS_Store
+._.DS_Store
+Thumbs.db
