@@ -95,7 +95,7 @@ module.exports = (grunt) ->
       options:
         livereload: true
 
-      coffeedev:
+      coffee:
         files: ["src/coffee/**/*.coffee"]
         tasks: ["coffee:dev"]
 
