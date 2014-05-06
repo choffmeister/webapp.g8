@@ -78,9 +78,9 @@ module.exports = (grunt) ->
           dest: "#{targetProd}"
         ,
           expand: true
-          cwd: "vendor"
+          cwd: "bower_components"
           src: "**/*.*"
-          dest: "#{targetProd}/vendor"
+          dest: "#{targetProd}/bower_components"
         ]
 
     connect:
