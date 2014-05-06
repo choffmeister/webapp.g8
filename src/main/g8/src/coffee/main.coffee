@@ -1,1 +1,1 @@
-window.alert("Application $name$ started")
+console.log "Application $name$ started"
