@@ -22,6 +22,13 @@ module.exports = (grunt) ->
         dest: "#{targetProd}/js"
         ext: ".js"
 
+    uglify:
+      prod:
+        expand: true
+        cwd: "#{targetProd}/js"
+        src: ["**/*.js"]
+        dest: "#{targetProd}/js"
+
     jade:
       dev:
         files: [
@@ -118,6 +125,6 @@ module.exports = (grunt) ->
 
   require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
   grunt.registerTask "dev-build", ["clean:dev", "coffee:dev", "jade:dev", "less:dev", "copy:dev"]
-  grunt.registerTask "prod-build", ["clean:prod", "coffee:prod", "jade:prod", "less:prod", "copy:prod"]
+  grunt.registerTask "prod-build", ["clean:prod", "coffee:prod", "uglify:prod", "jade:prod", "less:prod", "copy:prod"]
   grunt.registerTask "dev-server", ["dev-build", "connect:dev"]
   grunt.registerTask "default", ["dev-server", "watch"]
